@@ -1,8 +1,7 @@
 <snippet>
 	<content><![CDATA[
-for each ${1:tabela} where
-		 ${2:condicoes} no-lock:
-	${3:Codigo}
+for each ${1:tabela} where ${2:condicoes} no-lock:
+	${3}
 end.
 ]]></content>
 	<tabTrigger>for each</tabTrigger>
