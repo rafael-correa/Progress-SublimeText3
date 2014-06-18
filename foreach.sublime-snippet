@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+for each ${1:cursor_name} where
+		 ${2:variable1, variable2, ...} no-lock:
+	${3}
+end.
+
+]]></content>
+	<tabTrigger>foreach</tabTrigger>
+	<scope>source.4GL</scope>
+</snippet>
