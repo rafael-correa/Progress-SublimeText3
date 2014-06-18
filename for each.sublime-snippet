@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-for each ${1:tabela} where ${2:condicoes} no-lock:
+for each ${1:tabela} where ${2:condicoes} no-lock.
 	${3}
 end.
 ]]></content>
