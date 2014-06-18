@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-for each ${1:cursor_name} where
-		 ${2:variable1, variable2, ...} no-lock:
-	${3}
+for each tabela where
+		 condicoes no-lock:
+	/*Código*/
 end.
 
 ]]></content>
