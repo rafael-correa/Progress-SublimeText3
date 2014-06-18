@@ -76,7 +76,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(display|delete|create|update|assign|import( unformatted)?|input\s+(from|close)|with|skip)\b</string>
+			<string>(?i)\b(def|var|display|delete|create|update|assign|import( unformatted)?|input\s+(from|close)|with|skip)\b</string>
 			<key>name</key>
 			<string>keyword.statement.source.progress</string>
 		</dict>
