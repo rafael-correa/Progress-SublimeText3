@@ -1,9 +1,10 @@
 <snippet>
 	<content><![CDATA[
-for each ${1:tabela} where ${2:condicoes}
-	${3}
+for each ${1:tabela} where
+		 ${2:condicoes} no-lock:
+	${3:Codigo}
 end.
 ]]></content>
-	<tabTrigger>foreach</tabTrigger>
+	<tabTrigger>for each</tabTrigger>
 	<scope>source.progress</scope>
 </snippet>
