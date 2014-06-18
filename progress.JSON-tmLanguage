@@ -1,0 +1,141 @@
+{ "name": "Progress",
+  "scopeName": "source.progress", 
+  "fileTypes": ["p", "i"], 
+  "patterns": [
+
+    {
+      "name": "comment.block.source.progress",
+      "begin": "/\\*",
+      "end": "\\*/(?![^/]*?\\*/)"
+    },
+
+    {
+      "comment": "Single quoted string",
+      "match": "('(?:'|.)*?')",
+      "name": "string.single.source.progress"
+    },
+
+    {
+      "name": "string.double.source.progress",
+      "match": "\"\"[a-zA-Z0-9_\\.\\-]+\"\""
+    },
+
+    {
+      "name": "string.double.complex.progress",
+      "begin": "(\"(?!\"[a-zA-Z]+)|\"\"[a-zA-Z]+)",
+      "end": "\"(?!\")",
+      "patterns": [
+        {
+          "name": "constant.character.escape.progress",
+          "match": "(~(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)|\"\")"
+        }
+      ]
+    },
+
+    {
+      "name": "constant.numeric.source.progress",
+      "match": "(?<!\\w)((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))"
+    },
+
+    {
+      "name": "constant.language.source.progress",
+      "match": "(?i)\\b(true|false|yes|no(?!-))\\b"
+    },
+
+
+    {
+      "name": "keyword.operator.source.progress",
+      "match": "(?i)(\\b(or|and|not|is)\\b|(=|\\+| - |/|<|>|,))"
+    },
+
+    {
+      "name": "keyword.option.source.progress",
+      "match": "(?i)(\\b(no-undo|no-box|no-labels|no-lock|no-error|format|colon|label|initial|side-labels|width|primary|use-index)\\b|@)"
+    },
+
+    {
+      "name": "keyword.statement.source.progress",
+      "match": "(?i)\\b(display|delete|create|update|assign|import( unformatted)?|input\\s+(from|close)|with|skip)\\b"
+    },
+
+    {
+      "name": "keyword.type.source.progress",
+      "match": "(?i)\\b(as|for(?!\\s+(each|first|last)))\\b"
+    },
+
+    {
+      "match": "(?i)\\b(like)\\s+([a-zA-Z0-9_\\.-]+)",
+      "captures": {
+        "1": { "name": "keyword.type.source.progress" },
+        "2": { "name": "storage.type.source.progress" }
+      }
+    },
+
+    {
+      "name": "keyword.control.source.progress",
+      "match": "(?i)(\\b(if|availprogresse|down|where|else( if)?|for\\s+(each|first|last)|do while|repeat(\\s+while)?|find( first|last)?|then( do( transaction)?)?|next|page|quit)\\b|(?<!-)(\\bend\\b(?!\\s+procedure)))"
+    },
+
+
+
+    {
+      "name": "storage.type.define.progress",
+      "match": "(?i)\\b(define\\s+(((new\\s+)?shared\\s+)?(variprogresse|stream|buffer)|((input|input-output|output)\\s+parameter)|temp-tprogresse|query)|form)\\b"
+    },
+
+    {
+      "name": "storage.type.source.progress",
+      "match": "(?i)\\b(?<!&)(character|(?<!-)handle|dataset-handle|dataset|field|(?<!-)index|logical|integer|stream|frame [a-z]+)(?!\\s*\\()\\b"
+    },
+
+    {
+      "name": "storage.type.function.progress",
+      "match": "(?i)(end (procedure))"
+    },
+
+    {
+      "name": "support.function.progress",
+      "match": "(?i)(\\b[a-z][a-z0-9_-]*?\\b\\s*)(?=\\s*\\(.*?\\))",
+      "captures": {
+        "1": { "name": "support.function.source.progress" }
+      }
+    },
+
+    {
+      "name": "support.function.progress",
+      "match": "(?i)\\b(run) ([a-z][a-z0-9_-]*?)\\b(\\s*\\(.*?\\))?",
+      "captures": {
+        "1": { "name": "keyword.statement.source.progress" },
+        "2": { "name": "support.function.source.progress" }
+      }
+    },
+
+
+    {
+      "name": "meta.function.source.progress",
+      "captures": {
+        "1": { "name": "storage.type.function.progress" },
+        "2": { "name": "entity.name.function.progress" }
+      },
+      "match": "(?i)(procedure)\\s+([a-z0-9_-]+):"
+    },
+
+    {
+      "name": "meta.function.bracket.progress",
+      "match": "(?i)(\\{[a-z0-9_\\./-]+)",
+      "captures": {
+        "1": { "name": "support.function.source.progress" }
+      }
+    },
+
+    {
+      "name": "meta.function.bracket.progress",
+      "match": "\\}",
+      "captures": {
+        "0": { "name": "support.function.source.progress" }
+      }
+    }
+
+  ],
+  "uuid": "3bcebd60-f6cc-404f-930a-528f32956502"
+}
