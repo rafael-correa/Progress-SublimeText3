@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+find ${1:tabela} where
+	 ${2:condicao} = ${3:condicao} no-lock no-error.
+]]></content>
+	<tabTrigger>find</tabTrigger>
+	<scope>source.progress</scope>
+</snippet>
