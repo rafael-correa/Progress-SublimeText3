@@ -5,5 +5,5 @@ for each ${1:tabela} where ${2:condicoes}
 end.
 ]]></content>
 	<tabTrigger>foreach</tabTrigger>
-	<scope>source.4GL</scope>
+	<scope>source.progress</scope>
 </snippet>
