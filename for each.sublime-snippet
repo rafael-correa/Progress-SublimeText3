@@ -1,12 +1,10 @@
 <snippet>
-	<content>
-<![CDATA[
+	<content><![CDATA[
 for each tabela where
 		 condicoes no-lock:
 	/*Código*/
 end.
-]]>
-	</content>
+]]></content>
 	<tabTrigger>for each</tabTrigger>
 	<scope>source.progress</scope>
 </snippet>
