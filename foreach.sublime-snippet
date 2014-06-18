@@ -6,6 +6,6 @@ for each ${1:cursor_name} where
 end.
 
 ]]></content>
-	<tabTrigger>foreach</tabTrigger>
-	<scope>source.4GL</scope>
+	<tabTrigger>for each</tabTrigger>
+	<scope>source.progress</scope>
 </snippet>
